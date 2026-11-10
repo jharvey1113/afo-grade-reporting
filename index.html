@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFO Grade Reporting — Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/app.css?v=5">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23002E62%22/%3E%3Ctext x=%2250%22 y=%2266%22 font-size=%2244%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Arial%22 font-weight=%22bold%22%3EGR%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="demo-bar">
+    <span class="demo-tag"><i class="fa-solid fa-flask"></i> Demo — all students and staff are fictional</span>
+    <label class="demo-as">Signed in as
+      <select id="asUser"></select>
+    </label>
+  </div>
+
+  <header class="banner" id="banner">
+    <div class="banner-inner">
+      <div class="banner-text">
+        <div class="app-name">AFO Grade Reporting</div>
+        <h1 id="campusName">—</h1>
+        <div class="banner-sub" id="bannerSub"></div>
+      </div>
+      <div class="banner-right">
+        <div class="who" id="whoBox"></div>
+        <label class="campus-switch" id="campusSwitchWrap" hidden>
+          <span id="campusSwitchLabel">Working under</span>
+          <select id="campusSwitch"></select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs"></nav>
+  <main id="main"></main>
+
+  <div class="modal-back" id="modalBack" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h2 id="modalTitle"></h2>
+        <button class="icon-btn" id="modalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-foot" id="modalFoot"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js?v=5"></script>
+  <script src="js/app.js?v=5"></script>
+</body>
+</html>
